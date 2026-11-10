@@ -39,7 +39,7 @@ a,button{touch-action:manipulation}
 .cerceve>.on:not(span){opacity:1}
 .cerceve video.on,.cerceve img.giris.on{animation:suzul 20s ease-in-out infinite alternate}
 .cerceve>video.dv{object-fit:cover}
-.cerceve>img.giris{object-fit:cover;object-position:50% 50%!important}.cerceve img.giris.on{animation:none}
+.cerceve>.giris{object-fit:cover;object-position:50% 50%!important}.cerceve .giris.on{animation:none}
 .cerceve video.dv.on{animation:none}
 @keyframes suzul{from{transform:scale(1)}to{transform:scale(1.05)}}
 .altyazi{display:none!important}
@@ -114,7 +114,7 @@ footer .yasal{grid-column:1/-1;font-size:var(--small);color:#9b978f;max-width:80
 
 .js .r{opacity:0;transform:translateY(20px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .js .r.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.cerceve>*{transition:none}.cerceve video.on,.cerceve img.giris.on{animation:none}.js .r{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.cerceve>*{transition:none}.cerceve video.on,.cerceve .giris.on{animation:none}.js .r{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
 @media(max-width:860px){
  .duzen{display:flex;flex-direction:column-reverse}
@@ -201,7 +201,7 @@ footer a.ik{display:inline-flex;align-items:center;gap:10px}footer a.ik svg{widt
 
   <aside class="sahne" aria-hidden="true">
     <div class="cerceve" id="cerceve">
-      <img class="on giris" src="img/site/giris-imza.webp?v=1794223568" width="1536" height="1812" alt="" style="object-position:50% 50%" fetchpriority="high">
+      <video class="on giris" muted loop playsinline autoplay preload="auto" poster="img/video/giris.jpg?v=1794340301" src="img/video/giris.mp4?v=1794340301"></video>
       <video muted loop playsinline preload="metadata" poster="img/video/hekim.jpg?v=1794241475" src="img/video/hekim.mp4?v=1794241475"></video>
       <img src="img/uyg/botoks.jpg" width="896" height="1200" alt="">
       <img src="img/dolgu/genel.svg" width="1200" height="1200" alt="" loading="lazy">
