@@ -126,9 +126,10 @@ footer .yasal{grid-column:1/-1;font-size:var(--small);color:#9b978f;max-width:80
  .kolon p,.kolon h1,.kolon .metin,.kolon .adimlar,.kolon address,.kayit{max-width:none}
  footer{grid-template-columns:1fr}
 }
-.wa{position:fixed;right:18px;bottom:18px;z-index:50;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}.wa svg{width:30px;height:30px;fill:#fff}
+.wa{position:fixed;right:18px;bottom:86px;z-index:50;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}.wa svg{width:30px;height:30px;fill:#fff}
 footer a.ik{display:inline-flex;align-items:center;gap:10px}footer a.ik svg{width:20px;height:20px;flex:none}
 .kah .manifesto{margin-bottom:10px}.kah .manifesto+p,.kah .manifesto~p{margin-top:12px}.kah .manifesto b{font-weight:600}
+.wa.il{bottom:18px;background:var(--ink)}.wa.il svg{fill:none;stroke:#fff;stroke-width:1.8;width:26px;height:26px}
 </style></head>
 <body>
 <a class="atla" href="#ana">İçeriğe geç</a>
@@ -142,9 +143,7 @@ footer a.ik{display:inline-flex;align-items:center;gap:10px}footer a.ik svg{widt
         <p>Güzellik, tarih boyunca değişen, toplumların kültürel değerleriyle şekillenen ve bireysel algılarla yeniden tanımlanan dinamik bir kavramdır. Her dönemin, her toplumun ve her bireyin güzelliğe bakışı farklıdır. Bu nedenle güzelliği değişmez kalıplar üzerinden değerlendirmek yerine, kişisel özellikleri ve doğal farklılıklarıyla ele almak gerekir.</p>
         <p>Bu noktada bilimsel yaklaşım, doğru hekimlik ve etik sorumluluk büyük önem taşır. Çünkü iyi bir estetik uygulamanın amacı, geçici güzellik trendlerini takip etmek veya herkesi aynı estetik kalıba yaklaştırmak değil; kişinin doğal özelliklerini koruyarak dengeli, uyumlu ve kendisiyle bütünleşen sonuçlara ulaşmaktır.</p>
         <p>Bizce estetik, değişen güzellik algısının peşinden gitmek değil; bilimin rehberliğinde, kişiye özel, bilinçli ve doğal kararlar verebilmektir.</p>
-        <a class="btn" href="#iletisim">İletişim bilgileri →</a>
       </div>
-      <nav aria-label="Bölümler"><a class="cizgi" href="#hekim">Hekim</a><a class="cizgi" href="#uygulamalar">Uygulamalar</a><a class="cizgi" href="#surec">Süreç</a><a class="cizgi" href="#mekan">Muayenehane</a><a class="cizgi" href="#sorular">Sorular</a></nav>
     </section>
 
     <section class="bol hek" id="hekim" data-sahne="1" aria-labelledby="h-hek">
@@ -297,4 +296,5 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.r').forEach((el,i)=>{el.style.transitionDelay=((i%4)*70)+'ms';io.observe(el)});
 </script>
 <a class="wa" href="https://wa.me/905449599331" aria-label="WhatsApp ile yazın"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4 14.6 14.6 0 0 0 5.6 5c2.1.9 2.9 1 4 .8a3.3 3.3 0 0 0 2.2-1.6 2.7 2.7 0 0 0 .2-1.6c-.1-.1-.3-.2-.6-.4z"/></svg></a>
+<a class="wa il" href="#iletisim" aria-label="İletişim bilgileri"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg></a>
 </body></html>
