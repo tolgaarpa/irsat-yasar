@@ -279,7 +279,7 @@ function sahne(cer,yaziEl,yazilar){const k=[...cer.children].filter(x=>x.tagName
 const Y1=['Giriş, imza duvarı','Muayenehane turu','Botulinum toksin · yapay zekâ ile üretilmiş temsilî görsel, hasta değildir','','Cilt bakımı · yapay zekâ ile üretilmiş temsilî görsel, hasta değildir','Kişiye özel plan · yapay zekâ ile üretilmiş temsilî görsel, hasta değildir','Mezoterapi · yapay zekâ ile üretilmiş temsilî görsel, hasta değildir','PRP · yapay zekâ ile üretilmiş temsilî görsel, hasta değildir','Saç tedavileri · yapay zekâ ile üretilmiş temsilî görsel, hasta değildir','Lazer · yapay zekâ ile üretilmiş temsilî görsel, hasta değildir','Hekim odası','Bekleme salonu','İmza duvarı','','','','','','','','',''];
 const s1=sahne(document.getElementById('cerceve'),document.getElementById('altyazi'),Y1);
 const s2=sahne(document.getElementById('cerceve2'),document.getElementById('altyazi2'),['Bekleme salonu','']);
-const gozlem=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const n=+e.target.dataset.sahne;if(n<=10)s1(n);else s2(n-11)}),{rootMargin:'-45% 0px -45% 0px'});
+const gozlem=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const n=+e.target.dataset.sahne;if(n<=10)s1(n===1?0:n);else s2(n-11)}),{rootMargin:'-45% 0px -45% 0px'});
 document.querySelectorAll('[data-sahne]').forEach(s=>gozlem.observe(s));
 document.querySelectorAll('#liste summary, #dolgu-liste summary').forEach(a=>{const f=()=>s1(+a.dataset.g);a.addEventListener('mouseenter',f);a.addEventListener('focus',f)});
 if(azHareket)document.querySelectorAll('video').forEach(v=>{v.removeAttribute('autoplay');v.pause()});
