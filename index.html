@@ -128,7 +128,7 @@ footer .yasal{grid-column:1/-1;font-size:var(--small);color:#9b978f;max-width:80
 }
 .wa{position:fixed;right:18px;bottom:86px;z-index:50;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}.wa svg{width:30px;height:30px;fill:#fff}
 footer a.ik{display:inline-flex;align-items:center;gap:10px}footer a.ik svg{width:20px;height:20px;flex:none}
-.kah .orta p+p{margin-top:12px}.kah .manifesto{margin-bottom:10px}.kah .manifesto+p,.kah .manifesto~p{margin-top:12px}.kah .manifesto b{font-weight:600}
+.kah .orta:not(.acik) p.dvm{display:none}.kah .orta:not(.acik) p.ilk{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.kah .devam{margin-top:14px;padding:0;border:0;background:none;font:inherit;font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:4px;cursor:pointer}.kah .orta p+p{margin-top:12px}.kah .manifesto{margin-bottom:10px}.kah .manifesto+p,.kah .manifesto~p{margin-top:12px}.kah .manifesto b{font-weight:600}
 .wa.il{bottom:18px;background:var(--ink)}.wa.il svg{fill:none;stroke:#fff;stroke-width:1.8;width:26px;height:26px}
 </style></head>
 <body>
@@ -139,9 +139,10 @@ footer a.ik{display:inline-flex;align-items:center;gap:10px}footer a.ik svg{widt
       <img class="logo" src="img/site/logo-siyah.png" width="1259" height="331" alt="Dr. Mehmet İrşat Yaşar logosu">
       <div class="orta">
         <h1 id="h1">Güzellik Bir Algıdır, Estetik Bir Sorumluluktur.</h1>
-        <p>Güzellik, tarih boyunca değişen, toplumların kültürel değerleriyle şekillenen ve bireysel algılarla yeniden tanımlanan dinamik bir kavramdır. Her dönemin, her toplumun ve her bireyin güzelliğe bakışı farklıdır. Bu nedenle güzelliği değişmez kalıplar üzerinden değerlendirmek yerine, kişisel özellikleri ve doğal farklılıklarıyla ele almak gerekir.</p>
-        <p>Bu noktada bilimsel yaklaşım, doğru hekimlik ve etik sorumluluk büyük önem taşır. Çünkü iyi bir estetik uygulamanın amacı, geçici güzellik trendlerini takip etmek veya herkesi aynı estetik kalıba yaklaştırmak değil; kişinin doğal özelliklerini koruyarak dengeli, uyumlu ve kendisiyle bütünleşen sonuçlara ulaşmaktır.</p>
-        <p>Bizce estetik, değişen güzellik algısının peşinden gitmek değil; bilimin rehberliğinde, kişiye özel, bilinçli ve doğal kararlar verebilmektir.</p>
+        <p class="ilk">Güzellik, tarih boyunca değişen, toplumların kültürel değerleriyle şekillenen ve bireysel algılarla yeniden tanımlanan dinamik bir kavramdır. Her dönemin, her toplumun ve her bireyin güzelliğe bakışı farklıdır. Bu nedenle güzelliği değişmez kalıplar üzerinden değerlendirmek yerine, kişisel özellikleri ve doğal farklılıklarıyla ele almak gerekir.</p>
+        <p class="dvm">Bu noktada bilimsel yaklaşım, doğru hekimlik ve etik sorumluluk büyük önem taşır. Çünkü iyi bir estetik uygulamanın amacı, geçici güzellik trendlerini takip etmek veya herkesi aynı estetik kalıba yaklaştırmak değil; kişinin doğal özelliklerini koruyarak dengeli, uyumlu ve kendisiyle bütünleşen sonuçlara ulaşmaktır.</p>
+        <p class="dvm">Bizce estetik, değişen güzellik algısının peşinden gitmek değil; bilimin rehberliğinde, kişiye özel, bilinçli ve doğal kararlar verebilmektir.</p>
+        <button type="button" class="devam" onclick="this.parentNode.classList.toggle('acik');this.textContent=this.parentNode.classList.contains('acik')?'Daha az göster':'Devamını oku →'">Devamını oku →</button>
       </div>
     </section>
 
@@ -157,11 +158,10 @@ footer a.ik{display:inline-flex;align-items:center;gap:10px}footer a.ik svg{widt
 
     <section class="bol uyg" id="uygulamalar" data-sahne="2" aria-labelledby="h-uyg">
       <h2 id="h-uyg" class="r">Uygulamalar</h2>
-      <p class="r" style="max-width:44ch;margin-top:16px">Hangisinin size uygun olduğu, ya da hiçbirinin gerekmediği, muayeneden sonra konuşulur.</p>
       <p class="r uyari">Her cerrahi veya girişimsel işlemde sonuçlar kişiden kişiye değişiklik gösterebilir. İşlem öncesinde hekiminizden detaylı görüş almanız önerilir.</p>
       <ul class="liste r" id="liste">
         <li><details><summary data-g="2"><b>Botulinum toksin</b><i aria-hidden="true">+</i><span>Mimik çizgilerinde denge · alın, kaş arası, göz çevresi</span></summary><p>Mimik kaslarının neden olduğu çizgilerde, kasın aşırı çalışmasını dengelemeye yönelik bir uygulama. Amaç ifadeyi silmek değil, yüzü daha dinlenmiş göstermek.</p></details></li>
-        <li><details><summary data-g="21"><b>Hyaluronik asit dolgu</b><i aria-hidden="true">+</i><span>Hacim ve hatlarda ölçülü destek · dudak, elmacık, çene hattı</span></summary><p>Hacim kaybı ya da belirginleşmiş hatlarda, cildin kendi yapısında bulunan bir molekülle yapılan destek.</p><p><a class="ok" href="#dolgu">Bölge bölge animasyonlar →</a></p></details></li>
+        <li><details><summary data-g="21"><b>Hyaluronik asit dolgu</b><i aria-hidden="true">+</i><span>Hacim ve hatlarda ölçülü destek · dudak, elmacık, çene hattı</span></summary><p>Hacim kaybı ya da belirginleşmiş hatlarda, cildin kendi yapısında bulunan bir molekülle yapılan destek.</p><p><a class="ok" href="#dolgu">Uygulanabilir bölgeler →</a></p></details></li>
         <li><details><summary data-g="4"><b>Cilt bakımı uygulamaları</b><i aria-hidden="true">+</i><span>Doku ve ton, cilt tipine göre</span></summary><p>Cildin esnekliği ve tonu için, cilt tipine göre planlanan bakım uygulamaları.</p></details></li>
         <li><details><summary data-g="5"><b>Kişiye özel plan</b><i aria-hidden="true">+</i><span>Tek uygulama yerine yüzün bütününü düşünen yol haritası</span></summary><p>Tek bir uygulama yerine, yüzün bütününü düşünen ve zamana yayılan bir yol haritası. Önce eskiz, sonra çizgi.</p></details></li>
         <li><details><summary data-g="6"><b>Mezoterapi</b><i aria-hidden="true">+</i><span>İhtiyaca göre seçilen içerik, küçük dozlarla</span></summary><p>Cildin orta katmanına vitamin, mineral ve hyaluronik asit gibi, ihtiyaca göre seçilen içeriklerin küçük dozlarla uygulanması.</p></details></li>
