@@ -280,7 +280,7 @@ const s1=sahne(document.getElementById('cerceve'),document.getElementById('altya
 const s2=sahne(document.getElementById('cerceve2'),document.getElementById('altyazi2'),['Bekleme salonu','']);
 const gozlem=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const n=+e.target.dataset.sahne;if(n<=10)s1(n===1?0:n);else s2(n-11)}),{rootMargin:'-45% 0px -45% 0px'});
 document.querySelectorAll('[data-sahne]').forEach(s=>gozlem.observe(s));
-document.querySelectorAll('#liste summary, #dolgu-liste summary').forEach(a=>{const f=()=>s1(+a.dataset.g);a.addEventListener('mouseenter',f);a.addEventListener('focus',f)});
+document.querySelectorAll('#liste summary, #dolgu-liste summary').forEach(a=>{const f=()=>s1(+a.dataset.g);a.addEventListener('click',f)});
 if(azHareket)document.querySelectorAll('video').forEach(v=>{v.removeAttribute('autoplay');v.pause()});
 // yürüyüş turu yalnız ekrandayken oynar
 {const v=document.getElementById('yuru');if(v&&!azHareket)new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?v.play().catch(()=>{}):v.pause()),{threshold:.25}).observe(v)}
